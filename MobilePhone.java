@@ -17,9 +17,9 @@ public class MobilePhone extends Phone implements SendingSMS, SendingEmail {
             Scanner iScanner = new Scanner(System.in);
             System.out.printf("Введите текст СМС >> \n");
             String sms = iScanner.nextLine();
-            iScanner.close();
-            System.out.printf("Отправляем СМС: %s ...", sms);
-        } else System.out.println("Телефон выключен или нет заряда");
+            // iScanner.close();
+            System.out.printf("Отправляем СМС: %s ...\n", sms);
+        } else System.out.println("Телефон выключен или нет заряда\n");
     }
 
     @Override
@@ -28,19 +28,19 @@ public class MobilePhone extends Phone implements SendingSMS, SendingEmail {
             Scanner iScanner = new Scanner(System.in);
             System.out.printf("Введите текст электронного письма >> \n");
             String email = iScanner.nextLine();
-            iScanner.close();
-            System.out.printf("Отправляем email: %s ...", email);
-        } else System.out.println("Телефон выключен или нет заряда");
+            // iScanner.close();
+            System.out.printf("Отправляем email: %s ...\n", email);
+        } else System.out.println("Телефон выключен или нет заряда\n");
     }
 
     @Override
     public void receiveSMS() {
-        if (this.on) { System.out.println("Вам пришло СМС!!!"); }
+        if (this.on) { System.out.println("Вам пришло СМС!!!\n"); }
     }
 
     @Override
     public void receiveEmail() {
-        if (this.on) { System.out.println("Вам пришел email!!!"); }
+        if (this.on) { System.out.println("Вам пришел email!!!\n"); }
     }
 
     

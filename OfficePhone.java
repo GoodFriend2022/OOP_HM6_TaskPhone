@@ -6,15 +6,14 @@ public class OfficePhone extends HomePhone implements SendingFax {
         super.on = true;
     }
     
-    
     @Override
     public void sendingFax() {
-        System.out.println("Факс отправляется...");
+        if (this.on) { System.out.println("Факс отправляется...\n"); }
     }
 
     @Override
     public void receiveFax() {
-        System.out.println("Вам пришел факс!!!");
+        if (this.on) { System.out.println("Вам пришел факс!!!\n"); }
     }
     
 }
